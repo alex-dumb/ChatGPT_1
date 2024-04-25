@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Solar System Exploration</title>
+    <style>
+        body {
+            background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/galaxy-wallpaper-hd-25336-25902-hd-wallpapers.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .planet-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .planet-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .planet-info {
+            text-align: center;
+            margin: 50px auto;
+            width: 80%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>NASA Solar System Exploration</h1>
+        <button class="planet-button" onclick="showPlanetInfo('Mercury')">Mercury</button>
+        <button class="planet-button" onclick="showPlanetInfo('Venus')">Venus</button>
+        <button class="planet-button" onclick="showPlanetInfo('Earth')">Earth</button>
+        <button class="planet-button" onclick="showPlanetInfo('Mars')">Mars</button>
+        <button class="planet-button" onclick="showPlanetInfo('Jupiter')">Jupiter</button>
+        <button class="planet-button" onclick="showPlanetInfo('Saturn')">Saturn</button>
+        <button class="planet-button" onclick="showPlanetInfo('Uranus')">Uranus</button>
+        <button class="planet-button" onclick="showPlanetInfo('Neptune')">Neptune</button>
+    </header>
+
+    <div class="planet-info" id="planetInfo">
+        <h2>Earth</h2>
+        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss064e000201_lrg.jpg" alt="Earth">
+        <p>Earth is the third planet from the Sun and the only astronomical object known to harbor life.</p>
+    </div>
+
+    <footer>
+        &copy; 2024 NASA Solar System Exploration
+    </footer>
+
+    <script>
+        function showPlanetInfo(planet) {
+            const planetInfo = document.getElementById('planetInfo');
+            switch (planet) {
+                case 'Mercury':
+                    planetInfo.innerHTML = `
+                        <h2>Mercury</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia18921-planetmercury-20160203.jpg" alt="Mercury">
+                        <p>Mercury is the smallest planet in our solar system and closest to the Sun.</p>`;
+                    break;
+                case 'Venus':
+                    planetInfo.innerHTML = `
+                        <h2>Venus</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/venus.jpg" alt="Venus">
+                        <p>Venus is the second planet from the Sun and is often called Earth's "sister planet".</p>`;
+                    break;
+                case 'Earth':
+                    planetInfo.innerHTML = `
+                        <h2>Earth</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/iss064e000201_lrg.jpg" alt="Earth">
+                        <p>Earth is the third planet from the Sun and the only astronomical object known to harbor life.</p>`;
+                    break;
+                case 'Mars':
+                    planetInfo.innerHTML = `
+                        <h2>Mars</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/mars-landing-page.jpg" alt="Mars">
+                        <p>Mars is the fourth planet from the Sun and is often called the "Red Planet" due to its reddish appearance.</p>`;
+                    break;
+                case 'Jupiter':
+                    planetInfo.innerHTML = `
+                        <h2>Jupiter</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia23645-16.jpg" alt="Jupiter">
+                        <p>Jupiter is the largest planet in our solar system and is known for its Great Red Spot, a giant storm that has been raging for centuries.</p>`;
+                    break;
+                case 'Saturn':
+                    planetInfo.innerHTML = `
+                        <h2>Saturn</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia23645-16.jpg" alt="Saturn">
+                        <p>Saturn is known for its beautiful rings made of ice and dust particles.</p>`;
+                    break;
+                case 'Uranus':
+                    planetInfo.innerHTML = `
+                        <h2>Uranus</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia23645-16.jpg" alt="Uranus">
+                        <p>Uranus is the seventh planet from the Sun and is unique because it rotates on its side.</p>`;
+                    break;
+                case 'Neptune':
+                    planetInfo.innerHTML = `
+                        <h2>Neptune</h2>
+                        <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/pia23645-16.jpg" alt="Neptune">
+                        <p>Neptune is the eighth and farthest known planet from the Sun in our solar system.</p>`;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
